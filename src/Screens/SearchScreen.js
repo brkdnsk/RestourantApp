@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,TextInput } from 'react-native'
+import { StyleSheet, Text, View ,TextInput,FlatList } from 'react-native'
 import React from 'react'
 import SearchBar from '../components/SearchBar'
 import useResults from '../Hooks/useResults'
@@ -19,8 +19,8 @@ export default function SearchScreen() {
     <View>
         <SearchBar/>
         <ResultsList title='Ucuz Restoranlar' results={filterByResultsByPrice('₺ ')}/>
-        <ResultsList title='Ucuz Restoranlar' results={filterByResultsByPrice('₺₺ ')}/>
-        <ResultsList title='Ucuz Restoranlar' results={filterByResultsByPrice('₺₺₺')}/>
+        <ResultsList title='Uygun Restoranlar' results={filterByResultsByPrice('₺₺ ')}/>
+        <ResultsList title='Pahalı Restoranlar' results={filterByResultsByPrice('₺₺₺')}/>
     </View>
   )
 }
