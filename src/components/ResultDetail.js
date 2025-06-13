@@ -4,8 +4,9 @@ import React from 'react'
 export default function ResultDetail({result}) {
   return (
     <View>
-      <Image style ={{width:250,height:120}}source={{uri:result.image_url}}/>
-      <Text>ResultDetail</Text>
+      <Image style ={{width:250,height:120}}source={result.image_url ?{uri:result.image_url}: null}/>
+      <Text>{result.name}</Text>
+      <Text>{result.rating} Yıldızlı Restoran, {result.review_count} Adet Yorum </Text>
     </View>
   )
 }
